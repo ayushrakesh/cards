@@ -21,9 +21,22 @@ func main() {
 
 	// cards.saveToFile("my_cards")
 
-	cards := deckFromFile("my_cards")
+	// cards := deckFromFile("my_cards")
+	// cards.shuffle()
+	// cards.print()
 
+	// fmt.Println(rand.Intn(100))
+	// fmt.Println(rand.Intn(100))
+	// fmt.Println(time.Now().UnixNano())
+
+	// source := rand.NewSource(time.Now().UnixNano())
+
+	// r := rand.New(source)
+
+	cards := newDeck()
+	cards.shuffle()
 	cards.print()
+
 }
 
 // func newCard() string {
