@@ -7,7 +7,7 @@ func main() {
 	// cards := deck{"Ace of Spades", "King of Heart"}
 	// cards = append(cards, "Six of Heart")
 
-	cards := newDeck()
+	// cards := newDeck()
 
 	// handsDeck, remainingDeck := deal(cards, 8)
 
@@ -19,7 +19,11 @@ func main() {
 
 	// fmt.Println(cards.deckToString())
 
-	cards.saveToFile("my_cards")
+	// cards.saveToFile("my_cards")
+
+	cards := deckFromFile("my_cards")
+
+	cards.print()
 }
 
 // func newCard() string {
