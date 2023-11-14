@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"io/ioutil"
+	"strings"
+)
 
 //Custom type declaration
 type deck []string
@@ -29,4 +33,15 @@ func (d deck) print() {
 
 func deal(d deck, handSize int) (deck, deck) {
 	return d[:handSize], d[handSize:]
+}
+
+// convert deck to string
+func (d deck) deckToString() string {
+
+	return strings.Join([]string(d), ",")
+}
+
+//save deck to file
+func (d deck) saveToFile(filename string) error {
+	return ioutil.WriteFile(filename, []byte(d.deckToString()), 0666)
 }
